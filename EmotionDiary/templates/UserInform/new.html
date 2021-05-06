@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% load bootstrap4 %}
+
+{% block body %}
+{% load static %}
+  <div class="row">
+    <div class="col-6 offset-3">
+      <h1 style="margin-top: 50px">Add New Member</h1>
+      <form action="" method="post" class="form" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        {% buttons %}
+          <button type="submit" class="btn btn-primary">
+            Submit
+          </button>
+        {% endbuttons %}
+      </form>
+<!--      <h2>{{ career.career_name }}</h2>-->
+<!--      <img src="{% static 'img/ID001-farmer.png' %}" width="400px" height="400px" alt="一張圖片"/>-->
+    </div>
+  </div>
+{% endblock %}
